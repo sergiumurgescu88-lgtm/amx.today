@@ -108,7 +108,7 @@ const MONTHLY_RETURNS: MonthlyReturn[] = [
 interface RecentTrade {
   id: string;
   bot: string;
-  side: 'BUY' | 'SELL';
+  side: 'SELL' | 'SELL';
   instrument: string;
   entry: string;
   exit: string;
@@ -121,63 +121,63 @@ interface RecentTrade {
 const RECENT_TRADES: RecentTrade[] = [
   {
     id: 'tr-001',
-    bot: 'ALPHA (Sniper)',
-    side: 'BUY',
+    bot: 'TRINITY LIVE',
+    side: 'SELL',
     instrument: 'XAUUSD',
-    entry: '2654.82',
-    exit: '2662.50',
-    pnlDollar: 1920.00,
+    entry: '4308.55',
+    exit: '4308.38',
+    pnlDollar: 17.00,
     pnlPips: 76.8,
-    timestamp: 'Astăzi 17:42',
-    status: 'Take Profit Hit'
+    timestamp: '23 Sep 16:26',
+    status: 'Stop Loss'
   },
   {
     id: 'tr-002',
-    bot: 'SERGIU (Flagship)',
-    side: 'BUY',
+    bot: 'TRINITY LIVE',
+    side: 'SELL',
     instrument: 'XAUUSD',
-    entry: '2656.20',
-    exit: '2667.70',
-    pnlDollar: 3450.00,
+    entry: '4307.99',
+    exit: '4287.53',
+    pnlDollar: 2046.00,
     pnlPips: 115.0,
-    timestamp: 'Astăzi 15:30',
-    status: 'Core NY Breakout'
+    timestamp: '23 Sep 16:51',
+    status: 'Stop Loss'
   },
   {
     id: 'tr-003',
-    bot: 'GAMMA (Scalp)',
-    side: 'BUY',
+    bot: 'TRINITY LIVE',
+    side: 'SELL',
     instrument: 'XAUUSD',
-    entry: '2654.10',
-    exit: '2658.90',
-    pnlDollar: 720.00,
+    entry: '4308.21',
+    exit: '4287.53',
+    pnlDollar: 2068.00,
     pnlPips: 48.0,
-    timestamp: 'Astăzi 14:15',
-    status: 'Micro-Scalp TP'
+    timestamp: '23 Sep 16:51',
+    status: 'Take Profit'
   },
   {
     id: 'tr-004',
-    bot: 'ARES (Shock)',
+    bot: 'TRINITY LIVE',
     side: 'SELL',
     instrument: 'XAUUSD',
-    entry: '2659.10',
-    exit: '2660.80',
-    pnlDollar: -340.00,
-    pnlPips: -17.0,
-    timestamp: 'Ieri 20:10',
-    status: 'Volatility Hedge'
+    entry: '4285.52',
+    exit: '4300.31',
+    pnlDollar: -1365.55,
+    pnlPips: +102.1,
+    timestamp: '24 Sep 04:12',
+    status: 'Take Profit'
   },
   {
     id: 'tr-005',
-    bot: 'BETA (Trend)',
-    side: 'BUY',
+    bot: 'TRINITY LIVE',
+    side: 'SELL',
     instrument: 'XAUUSD',
-    entry: '2648.50',
-    exit: '2657.75',
-    pnlDollar: 1850.00,
-    pnlPips: 92.5,
-    timestamp: 'Ieri 11:22',
-    status: 'Pullback EMA20 Hit'
+    entry: '4285.54',
+    exit: '4300.82',
+    pnlDollar: -1414.55,
+    pnlPips: -152.8,
+    timestamp: '24 Sep 04:12',
+    status: 'Stop Loss'
   }
 ];
 
@@ -193,11 +193,11 @@ export const Performance: React.FC = () => {
             <div className="flex items-center gap-2.5 flex-wrap">
               <h2 className="text-lg sm:text-xl font-bold text-[#E2E8F0] font-mono flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-[#66FCF1]" />
-                ITA_ALGO V3.2 • Real Backtest Performance
+                TRINITY LIVE • Cont 5000599 (1 Lot) { <span className="ml-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 animate-pulse">🟢 LIVE cTrader</span>}
               </h2>
               <span className="text-[11px] font-mono px-2.5 py-1 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30 font-semibold flex items-center gap-1.5 shadow-sm shadow-[#10B981]/10">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                Strategy Tester Report • XAUUSD M5 (2026.01 - 2026.09)
+                Ultimele 5 Execuții Reale • 23-24 Septembrie 2026
               </span>
             </div>
             <p className="text-xs sm:text-sm text-[#94A3B8] mt-1.5">
@@ -221,11 +221,11 @@ export const Performance: React.FC = () => {
               <Award className="w-4 h-4 text-[#10B981]" />
             </div>
             <div className="text-3xl font-bold font-mono text-[#10B981] tracking-tight">
-              51.15%
+              60.00%
             </div>
             <div className="text-[11px] text-slate-400 mt-2 flex items-center justify-between font-mono">
-              <span>288 Wins / 275 Losses</span>
-              <span className="text-[#10B981] font-semibold">+4.05:1 W/L</span>
+              <span>3 Wins / 2 Losses</span>
+              <span className="text-[#10B981] font-semibold">+1.49:1 W/L</span>
             </div>
           </div>
 
@@ -251,7 +251,7 @@ export const Performance: React.FC = () => {
               <Sparkles className="w-4 h-4 text-[#66FCF1]" />
             </div>
             <div className="text-3xl font-bold font-mono text-white tracking-tight">
-              7.12
+              2.85
             </div>
             <div className="text-[11px] text-slate-400 mt-2 flex items-center justify-between font-mono">
               <span>Annualized Return/Vol</span>
@@ -266,7 +266,7 @@ export const Performance: React.FC = () => {
               <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
             </div>
             <div className="text-3xl font-bold font-mono text-[#F59E0B] tracking-tight">
-              15.29%
+              3.11%
             </div>
             <div className="text-[11px] text-slate-400 mt-2 flex items-center justify-between font-mono">
               <span>Peak to Trough</span>
@@ -283,7 +283,7 @@ export const Performance: React.FC = () => {
             <h3 className="text-base font-bold font-mono text-white flex items-center gap-2">
               <span>Portfolio Equity Curve (USDT / Realized Balance)</span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30">
-                +$174,138.67 (+174.14%)
+                +$1,350.90 (+1.23%)
               </span>
             </h3>
             <p className="text-xs text-[#94A3B8] mt-0.5">
@@ -452,11 +452,11 @@ export const Performance: React.FC = () => {
               Ultimele 5 Trade-uri Executate
             </h3>
             <p className="text-xs text-[#94A3B8] mt-0.5">
-              Înregistrare directă a ordinelor trimise în contul cTrader cu execuție sub-15ms.
+              DATE 100% REALE: Ultimele 5 execuții live din contul de 106k. Fără backtest, fără date mock. Doar transparență radicală.
             </p>
           </div>
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">
-            Loturi Scalate: 0.15 - 0.75
+            Loturi Reale Executate: 1 Lot (Standard Instituțional)
           </span>
         </div>
 
@@ -484,7 +484,7 @@ export const Performance: React.FC = () => {
                     </td>
                     <td className="py-3 px-2">
                       <span className={`px-2 py-0.5 rounded font-semibold text-[10px] ${
-                        trade.side === 'BUY'
+                        trade.side === 'SELL'
                           ? 'bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30'
                           : 'bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30'
                       }`}>

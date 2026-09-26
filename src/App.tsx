@@ -40,7 +40,7 @@ import { Performance } from './components/Dashboard/Performance.tsx';
 import { Pricing } from './components/Dashboard/Pricing.tsx';
 import { useAuth } from './hooks/useAuth.ts';
 import { useUserProfile } from './hooks/useUserProfile.ts';
-import { AuthGateOverlay } from './components/Common/AuthGateOverlay.tsx';
+
 import { AIChatbot } from './components/Common/AIChatbot.tsx';
 import { MacroNewsFeed } from './components/Dashboard/MacroNewsFeed.tsx';
 import { TradingViewChart } from './components/Dashboard/TradingViewChart.tsx';
@@ -1353,15 +1353,9 @@ function TrinityCommandCenter() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-6"
             >
-              <AuthGateOverlay
-                isAuthenticated={isAuthenticated}
-                onLogin={loginWithGoogle}
-                isLoading={authLoading}
-                title="Conectează-te pentru a accesa datele live și auditul de performanță"
-                subtitle="Raportul complet Myfxbook, detaliile tranzacțiilor pe secundă și curba de capital sunt accesibile utilizatorilor înregistrați."
-              >
+              
                 <Performance />
-              </AuthGateOverlay>
+              
             </motion.div>
           )}
 
@@ -1386,19 +1380,13 @@ function TrinityCommandCenter() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-6"
             >
-              <AuthGateOverlay
-                isAuthenticated={isAuthenticated}
-                onLogin={loginWithGoogle}
-                isLoading={authLoading}
-                title="Conectează-te pentru a accesa datele live și abonamentele VIP"
-                subtitle="Activează copierea automată cTrader Copy sau accesează semnalele algoritmice directe ale flotei Trinity Fund."
-              >
+              
                 <Pricing
                   userProfile={userProfile}
                   onNavigateToCommandCenter={() => setCurrentView('command-center')}
                   onUpgradeTier={updateSubscriptionTier}
                 />
-              </AuthGateOverlay>
+              
             </motion.div>
           )}
           </AnimatePresence>

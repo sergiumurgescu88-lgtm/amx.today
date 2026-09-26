@@ -1,0 +1,69 @@
+{
+  "isLive": true,
+  "lastUpdate": "2026-09-26T10:56:38.399464",
+  "metrics": {
+    "netProfit": 1350.9,
+    "profitFactor": 1.49,
+    "sharpeRatio": 2.85,
+    "maxDrawdown": 3.11,
+    "totalTrades": 5,
+    "winRate": 60.0
+  },
+  "lastTrades": [
+    {
+      "bot": "TRINITY LIVE",
+      "side": "SELL",
+      "instrument": "XAUUSD",
+      "entry": "4308.55",
+      "exit": "4308.38",
+      "pips": "+1.7",
+      "pnl": "+17.00",
+      "time": "23 Sep 16:26",
+      "exec": "Take Profit"
+    },
+    {
+      "bot": "TRINITY LIVE",
+      "side": "SELL",
+      "instrument": "XAUUSD",
+      "entry": "4307.99",
+      "exit": "4287.53",
+      "pips": "+204.6",
+      "pnl": "+2046.00",
+      "time": "23 Sep 16:51",
+      "exec": "Take Profit"
+    },
+    {
+      "bot": "TRINITY LIVE",
+      "side": "SELL",
+      "instrument": "XAUUSD",
+      "entry": "4308.21",
+      "exit": "4287.53",
+      "pips": "+206.8",
+      "pnl": "+2068.00",
+      "time": "23 Sep 16:51",
+      "exec": "Take Profit"
+    },
+    {
+      "bot": "TRINITY LIVE",
+      "side": "SELL",
+      "instrument": "XAUUSD",
+      "entry": "4285.52",
+      "exit": "4300.31",
+      "pips": "-147.9",
+      "pnl": "-1365.55",
+      "time": "24 Sep 04:12",
+      "exec": "Stop Loss"
+    },
+    {
+      "bot": "TRINITY LIVE",
+      "side": "SELL",
+      "instrument": "XAUUSD",
+      "entry": "4285.54",
+      "exit": "4300.82",
+      "pips": "-152.8",
+      "pnl": "-1414.55",
+      "time": "24 Sep 04:12",
+      "exec": "Stop Loss"
+    }
+  ]
+}

@@ -10,14 +10,12 @@ export default function Reports() {
     netProfit: 1350.90,
     profitFactor: 1.49,
     sharpeRatio: 2.85,
-    maxDrawdown: 1.31,
+    maxDrawdown: 3.11,
     totalTrades: 5,
     winRate: 60.00,
-    avgHoldTime: "3h 45m",
+    avgHoldTime: "4h 30m",
     largestWin: 2068.00,
     largestLoss: -1414.55,
-    avgWin: 1377.00,
-    avgLoss: -1390.05,
     recoveryFactor: 1.03,
     expectedPayoff: 270.18
   };
