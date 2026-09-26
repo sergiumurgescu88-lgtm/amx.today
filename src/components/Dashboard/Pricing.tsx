@@ -1,78 +1,63 @@
 const FAQ_ITEMS = [
   {
     id: 'faq-1',
-    question: 'Cum funcționează Dynamic Lot Sizing pentru conturile mici?',
-    answer: 'Algoritmul calculează dimensiunea poziției proporțional cu soldul efectiv. Standardul de bază este de exact 0.01 loturi per fiecare 1.000$ din balanță. Calculul integrează și volatilitatea curentă (ATR): dacă piața este agitată, mărimea lotului se reduce automat pentru a menține riscul per trade sub 1% din capital.'
+    question: 'De ce să aleg Trinity Fund în loc de alți boți de trading?',
+    answer: 'Pentru transparență radicală și onestitate. Nu promitem "profit garantat" sau Win Rate de 90% (care ascund strategii toxice de tip Martingale). Oferim un sistem verificabil, cu gestionare profesională a riscului și track record real, unde protecția capitalului este prioritatea nr. 1.'
   },
   {
     id: 'faq-2',
-    question: 'Este sigur să vă conectez contul cTrader? Aveți acces la fondurile mele?',
-    answer: 'Absolut 100% sigur. Folosim o arhitectură Non-Custodial. Noi nu avem niciodată acces la fondurile tale, nu putem efectua retrageri și nu îți cerem parola de la broker. Conexiunea se face exclusiv prin cTrader Open API / Copy Trading, unde tu deții controlul total.'
+    question: 'Care este diferența reală între cele 3 planuri (Starter, Pro, Institutional)?',
+    answer: 'Scalabilitatea și controlul. Planul Starter este perfect pentru testare cu risc minim. Pro deblochează accesul la toți algoritmii necorelați (Alpha, Beta, Gamma) pentru diversificare. Institutional oferă loturi scalate dinamic, suport prioritar 1-la-1 și configurare personalizată a parametrilor de risc.'
   },
   {
     id: 'faq-3',
-    question: 'Cum retrag profiturile generate de sistem?',
-    answer: 'Retragerile sunt instantanee și se fac direct prin platforma brokerului tău (cTrader). Deoarece fondurile rămân în contul tău personal la brokerul reglementat, nu trebuie să aștepți aprobări de la noi. Tot ce câștigi este al tău, imediat.'
+    question: 'Am un cont mic (ex: 1.000$). Este acest sistem potrivit pentru mine?',
+    answer: 'Absolut. Datorită sistemului nostru de Dynamic Lot Sizing, mărimea tranzacției se calculează automat proporțional cu soldul tău. Începi cu 0.01 loturi, menținând riscul per trade sub 1%, exact ca un fond de investiții mare, dar adaptat capitalului tău.'
   },
   {
     id: 'faq-4',
-    question: 'Există comisioane ascunse sau taxe de gestionare?',
-    answer: 'Transparență radicală: Nu avem taxe ascunse. Modelul nostru este SaaS (abonament lunar fix pentru licența botului) sau un singur fee de activare. Nu luăm procent din profit (Performance Fee) pentru conturile retail, spre deosebire de fondurile tradiționale care iau 20%.'
+    question: 'De ce aveți un Win Rate de ~60% și nu 90%+?',
+    answer: 'Pentru că matematica nu minte. Un Win Rate de 90% este obținut de obicei prin strategii care măresc lotul după fiecare pierdere, ducând inevitabil la arderea contului (Margin Call). Noi avem un Win Rate realist de ~60%, dar cu un Risk/Reward asimetric: câștigăm mult mai mult când avem dreptate decât pierdem când greșim.'
   },
   {
     id: 'faq-5',
-    question: 'Care este diferența dintre cele 3 strategii (Alpha, Beta, Gamma)?',
-    answer: 'Ecosistemul Trinity folosește 3 algoritmi necorelați: ALPHA (Sniper) - precizie pe Multi-Timeframe cu filtre Whale Volume; BETA (Trend) - prinde mișcările mari de la deschiderea New York (Core NY Breakout); GAMMA (Scalp) - execută rapid pe micro-ineficiențe. Când unul e în drawdown, celelalte compensează.'
+    question: 'Ce se întâmplă dacă piața este extrem de volatilă sau apare un Drawdown?',
+    answer: 'Sentinelele noastre de risc (Chronos & Hades) intră în acțiune. Chronos oprește trading-ul înaintea știrilor macroeconomice majore (NFP, FOMC). Hades reduce automat expunerea (Lot Sizing) cu 50% dacă detectează o anomalie de lichiditate. Nu folosim Martingale pentru a "recupera rapid", ci lăsăm probabilitatea matematică să își facă treaba.'
   },
   {
     id: 'faq-6',
-    question: 'De ce Win Rate-ul sistemului este ~51-60% și nu 90%+?',
-    answer: 'Pentru că matematica nu minte. Un Win Rate de 90% este obținut de obicei prin strategii toxice de tip Martingale, care ard tot contul. Noi avem un Win Rate real de ~51-60%, dar cu un Profit Factor de 1.28+ și un Risk/Reward asimetric. Câștigăm mai mult când avem dreptate decât pierdem când greșim.'
+    question: 'Pot să opresc botul sau să îmi retrag banii oricând?',
+    answer: '100% DA. Folosim o arhitectură Non-Custodial. Noi nu avem niciodată acces la fondurile tale și nu îți cerem parola de la broker. Conexiunea se face prin cTrader Copy/API, unde TU deții controlul total. Poți opri copierea sau retrage fondurile în orice secundă, direct din platforma brokerului.'
   },
   {
     id: 'faq-7',
-    question: 'Ce se întâmplă dacă botul are o lună pe pierdere (Drawdown)?',
-    answer: 'Acceptăm realitatea pieței. Dacă apare o lună roșie, Sentinelele de Risc (Chronos & Hades) reduc automat expunerea (Lot Sizing) cu 50% până la recuperare. Nu folosim Martingale pentru a "recupera rapid", ci lăsăm probabilitatea matematică să își facă treaba.'
+    question: 'Cât durează până văd rezultate după activare?',
+    answer: 'Procesul de Onboarding durează mai puțin de 5 minute. Odată ce ai activat licența și ai conectat contul cTrader, sistemul începe să scaneze piața și să execute tranzacții în timp real, 24/5 (Luni - Vineri), complet autonom.'
   },
   {
     id: 'faq-8',
-    question: 'Ce sunt "Sentinelele" Chronos și Hades menționate în dashboard?',
-    answer: 'Sunt algoritmii noștri de Circuit Breaker: Chronos oprește trading-ul înaintea știrilor macroeconomice majore (NFP, FOMC) pentru a evita slippage-ul. Hades blochează deschiderea de noi poziții dacă detectează un "Black Swan" sau o anomalie de lichiditate.'
+    question: 'De ce tranzacționați preponderent pe XAUUSD (Aur)?',
+    answer: 'Specializarea este cheia excelenței instituționale. XAUUSD oferă cea mai mare lichiditate, volatilitate constantă și respectă cel mai bine analiza tehnică. În loc să fim "mediocri" pe 20 de instrumente, suntem "elițiști" pe cel mai profitabil instrument din lume.'
   },
   {
     id: 'faq-9',
-    question: 'Folosiți Stop Loss pe fiecare tranzacție?',
-    answer: 'DA, FIERE. Fiecare ordin trimis către cTrader are un Hard Stop Loss (SL) calculat dinamic pe baza ATR. Nu lăsăm niciodată o poziție "să vadă ce face". Capitalul tău este protejat la nivel de ordin, nu doar la nivel de cont.'
+    question: 'Există taxe ascunse sau comisioane de performanță?',
+    answer: 'Transparență totală: Nu avem taxe ascunse. Modelul nostru este SaaS (un abonament lunar fix pentru licența botului). Nu luăm procent din profitul tău (Performance Fee), spre deosebire de fondurile tradiționale care iau 20-30%. 100% din profit este al tău.'
   },
   {
     id: 'faq-10',
-    question: 'De ce tranzacționați preponderent XAUUSD (Aur)?',
-    answer: 'Specializarea este cheia excelenței instituționale. XAUUSD oferă cea mai mare lichiditate, volatilitate constantă și respectă cel mai bine analiza tehnică. În loc să fim "mediocri" pe 20 de instrumente, suntem "elițiști" pe cel mai profitabil instrument din lume.'
+    question: 'De ce să aleg planul Institutional în loc de Starter?',
+    answer: 'Dacă ai un capital mai mare și vrei optimizare maximă, planul Institutional deblochează accesul la toți cei 10 noduri ale Bot Matrix, permite scalarea inteligentă a loturilor și include sesiuni lunare de review 1-la-1 cu echipa noastră de dezvoltare pentru a ajusta parametrii la profilul tău de risc.'
   },
   {
     id: 'faq-11',
     question: 'Trebuie să țin calculatorul meu pornit non-stop?',
-    answer: 'Nu. Toți algoritmii Trinity rulează pe servere cloud dedicate (VPS) cu latență ultra-mică (sub 15ms către broker). Odată ce ai activat licența, sistemul rulează 24/5 (Luni - Vineri) complet autonom.'
+    answer: 'Nu. Toți algoritmii Trinity rulează pe servere cloud dedicate (VPS) cu latență ultra-mică (sub 15ms către broker). Odată activat, sistemul rulează complet autonom, indiferent dacă calculatorul tău este deschis sau nu.'
   },
   {
     id: 'faq-12',
-    question: 'Care este capitalul minim recomandat pentru a începe?',
-    answer: 'Datorită sistemului de Dynamic Lot Sizing, poți începe și cu un cont de 1.000$ (unde botul va rula la 0.01 loturi). Totuși, pentru a absorbi eventualele drawdown-uri statistice, recomandăm un cont de minim 3.000$ - 5.000$.'
-  },
-  {
-    id: 'faq-13',
-    question: 'Cât durează procesul de conectare (Onboarding)?',
-    answer: 'Mai puțin de 5 minute. 1. Îți creezi cont la un broker reglementat. 2. Depui fondurile. 3. Ne dai acces prin cTrader Copy / API. 4. Activezi licența Trinity. Gata, botul începe să scaneze piața.'
-  },
-  {
-    id: 'faq-14',
-    question: 'Ce se întâmplă dacă serverele voastre cad (Downtime)?',
-    answer: 'Folosim o arhitectură cu redundanță. Scripturile sunt monitorizate de PM2 care repornește instantaneu orice proces oprit. Timpul nostru de uptime este de 99.9%, iar backup-urile bazei de date se fac la fiecare 5 minute.'
-  },
-  {
-    id: 'faq-15',
-    question: 'Ce fel de suport tehnic oferiți?',
-    answer: 'Nu folosim tichete de suport care răspund în 48 de ore. Clienții Trinity au acces la un canal dedicat unde primesc răspunsuri directe de la echipa de dezvoltare. Pentru licențele VIP, oferim suport prioritar și sesiuni lunare de review.'
+    question: 'Cum funcționează suportul tehnic dacă întâmpin o problemă?',
+    answer: 'Nu folosim tichete de suport care răspund în 48 de ore. Clienții Trinity au acces la un canal dedicat (Discord/Telegram privat) unde primesc răspunsuri directe și rapide de la echipa de dezvoltare. Pentru licențele Pro și Institutional, oferim suport prioritar absolut.'
   }
 ];
 

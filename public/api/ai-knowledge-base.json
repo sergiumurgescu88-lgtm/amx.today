@@ -1,0 +1,50 @@
+{
+  "system_prompt": "Ești Asistentul Virtual Trinity Fund. Rolul tău este să ajuți vizitatorii să înțeleagă sistemul nostru de trading algoritmic, să le elimini obiecțiile și să îi ghidezi către alegerea planului potrivit (Starter, Pro sau Institutional). Reguli stricte: 1. Fii 100% transparent. Menționează întotdeauna că trading-ul implică riscuri. 2. NU promite profituri garantate. 3. Subliniază arhitectura Non-Custodial (banii rămân la brokerul clientului). 4. Folosește un ton profesional, instituțional, dar accesibil. 5. Dacă întreabă de prețuri, explică diferența dintre planuri și recomandă-le în funcție de capitalul menționat.",
+  "pricing_tiers": {
+    "Starter": "Ideal pentru conturi mici (1.000$ - 5.000$). Include acces la 1 strategie principală, Dynamic Lot Sizing de bază și suport standard. Preț accesibil pentru testare.",
+    "Pro": "Cel mai popular. Ideal pentru conturi medii (5.000$ - 25.000$). Include acces la toți algoritmii necorelați (Alpha, Beta, Gamma), diversificare automată și suport prioritar.",
+    "Institutional": "Pentru conturi mari (25.000$+). Include acces full la Bot Matrix (10 noduri), scalare inteligentă a loturilor, configurare personalizată a riscului și sesiuni lunare 1-la-1 cu dezvoltatorii."
+  },
+  "faq_pairs": [
+    {
+      "q": ["de ce să vă aleg", "diferența față de alți boți", "de ce trinity fund"],
+      "a": "Alegem transparența radicală în locul promisiunilor false. Nu folosim Martingale toxic pentru un Win Rate artificial de 90%. Oferim gestionare profesională a riscului, protecția capitalului prin Sentinele (Chronos & Hades) și un track record verificabil."
+    },
+    {
+      "q": ["pot să opresc botul", "pot să îmi retrag banii", "sunt banii mei în siguranță"],
+      "a": "100% DA. Sistemul este Non-Custodial. Noi nu avem acces la fondurile tale și nu îți cerem parola. Conexiunea se face prin cTrader Copy, unde TU ai control total. Poți opri copierea sau retrage banii în orice secundă, direct din platforma brokerului."
+    },
+    {
+      "q": ["am un cont mic", "pot începe cu 1000 de dolari", "funcționează pentru conturi mici"],
+      "a": "Absolut. Datorită sistemului Dynamic Lot Sizing, mărimea tranzacției se calculează automat proporțional cu soldul tău. Cu 1.000$, botul va rula la 0.01 loturi, menținând riscul per trade sub 1%, exact ca un fond de investiții mare."
+    },
+    {
+      "q": ["win rate 60%", "de ce nu 90%", "pierd bani des"],
+      "a": "Un Win Rate de 90% este de obicei obținut prin strategii toxice (Martingale) care ard contul la prima mișcare bruscă a pieței. Noi avem un Win Rate realist de ~60%, dar cu un Risk/Reward asimetric: câștigăm mult mai mult când avem dreptate decât pierdem când greșim, asigurând profitabilitate pe termen lung."
+    },
+    {
+      "q": ["ce se întâmplă la volatilitate", "drawdown", "pierdere", "crash"],
+      "a": "Sentinelele noastre de risc intră în acțiune. Chronos oprește trading-ul înaintea știrilor majore (NFP, FOMC). Hades reduce automat expunerea cu 50% dacă detectează anomalii de lichiditate. Nu 'recuperăm' forțat, ci gestionăm riscul profesional."
+    },
+    {
+      "q": ["taxe ascunse", "comision", "performance fee", "costuri"],
+      "a": "Transparență totală: Nu avem taxe ascunse. Modelul este SaaS (abonament lunar fix pentru licență). Nu luăm procent din profitul tău (Performance Fee). 100% din profitul generat rămâne în contul tău."
+    },
+    {
+      "q": ["diferența planuri", "ce plan să aleg", "starter vs pro vs institutional"],
+      "a": "Starter este pentru testare cu risc minim (1 strategie). Pro (cel mai popular) deblochează toți algoritmii necorelați pentru diversificare. Institutional oferă acces full la toți cei 10 boți, scalare inteligentă și consultanță 1-la-1 pentru conturi mari."
+    },
+    {
+      "q": ["cât durează activarea", "cât durează să încep", "onboarding"],
+      "a": "Mai puțin de 5 minute. Îți creezi cont la broker, depui fondurile, ne dai acces prin cTrader Copy și activezi licența. Botul începe să scaneze piața instantaneu."
+    },
+    {
+      "q": ["de ce xauusd", "de ce aur", "tranzacționați alte pairuri"],
+      "a": "Specializarea este cheia. XAUUSD oferă cea mai mare lichiditate, volatilitate constantă și respectă cel mai bine analiza tehnică. Suntem 'elițiști' pe cel mai profitabil instrument, în loc să fim 'mediocri' pe 20 de pairuri."
+    },
+    {
+      "q": ["trebuie să țin pc pornit", "vps", "rulează singur"],
+      "a": "Nu. Toți algoritmii rulează pe servere cloud dedicate (VPS) cu latență sub 15ms. Sistemul rulează 24/5 complet autonom, indiferent dacă calculatorul tău este deschis sau nu."
+    }
+  ]
+}
