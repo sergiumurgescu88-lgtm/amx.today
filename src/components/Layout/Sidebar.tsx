@@ -87,7 +87,26 @@ const MOBILE_ESSENTIAL_ITEMS: {
   { id: 'command-center', label: 'Overview', icon: Activity },
   { id: 'bot-matrix', label: 'Matrix', icon: Cpu },
   { id: 'live-terminal', label: '🔴 Live Feed', icon: Terminal },
-  { id: 'pricing', label: 'Pricing', icon: Zap },
+  { id: 'pricing', label: 'Pricing', icon: Zap  },
+  {
+    id: 11,
+    name: 'OMEGA',
+    subtitle: 'Neural Execution',
+    color: 'from-violet-600 to-purple-800',
+    status: 'LIVE',
+    description: 'Algoritm 100% automatizat, conectat live. Rulează 24/7 pe baza configurației noastre, fără nicio intervenție manuală.',
+    features: ['Conectare Live Directă', 'Zero Intervenție Manuală', 'Rulează 24/7 Autonom', 'Configurație Premium Inclusă']
+  },
+  {
+    id: 12,
+    name: 'DELTA',
+    subtitle: 'Adaptive Strategy',
+    color: 'from-amber-500 to-yellow-700',
+    status: 'LIVE',
+    description: 'Bot premium cu mentenanță activă. Include 4 modificări de strategie pe săptămână (valoare $100/modificare/bot).',
+    price: '$399 / săptămână',
+    features: ['4 Modificări Strategice / Săptămână', 'Valoare: $100 per modificare / bot', 'Adaptare Dinamică la Volatilitate', 'Suport Dedicat']
+  }
 ];
 
 interface SidebarProps {
