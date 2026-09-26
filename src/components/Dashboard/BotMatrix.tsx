@@ -204,6 +204,38 @@ const BOTS_DATA: BotData[] = [
     humanExplanation: 'Hades este santinela raportului săptămânal Commitment of Traders (COT): dacă fondurile speculative de hedging ating o expunere extremă (peste percentila 90% istorică), blochează orice intrare în direcția aglomerată pentru a preveni lichidările bruște.',
     executionRoute: 'CIRCUIT BREAKER',
     timeframe: 'Weekly COT Sentinel'
+  },
+  {
+    id: 'custom_standard',
+    name: 'CUSTOM',
+    codename: 'PACHET MENTENANȚĂ',
+    icon: '🔴',
+    subtitle: '$399 / lună (4 modificări / 10 boți)',
+    status: 'CUSTOM',
+    statusBadge: '🔴 CUSTOM',
+    lotRange: 'LA ALEGEREA TA',
+    riskPct: 'LA ALEGEREA TA',
+    whaleMin: 'LA ALEGEREA TA',
+    adxMin: 'LA ALEGEREA TA',
+    humanExplanation: 'La cererea clientului, cu strategia clientului și structura noastră. Include 4 modificări de strategie pe lună pentru flota de 10 boți. Totul este 100% custom, clientul alege toți parametrii.',
+    executionRoute: 'CUSTOM',
+    timeframe: 'CONFIGURARE TOTALĂ'
+  },
+  {
+    id: 'custom_premium',
+    name: 'CUSTOM',
+    codename: 'PACHET PREMIUM',
+    icon: '🔴',
+    subtitle: '$1299 / lună (Modificări NELIMITATE)',
+    status: 'CUSTOM',
+    statusBadge: '🔴 CUSTOM',
+    lotRange: 'LA ALEGEREA TA',
+    riskPct: 'LA ALEGEREA TA',
+    whaleMin: 'LA ALEGEREA TA',
+    adxMin: 'LA ALEGEREA TA',
+    humanExplanation: 'La cererea clientului, cu strategia clientului și structura noastră. Include modificări NELIMITATE de strategie pentru toți boții. Totul este 100% custom, clientul alege toți parametrii.',
+    executionRoute: 'CUSTOM',
+    timeframe: 'CONFIGURARE TOTALĂ'
   }
 ];
 
@@ -359,7 +391,7 @@ export const BotMatrix: React.FC<BotMatrixProps> = ({ onSelectBot, isLoading = f
             <motion.div
               key={bot.id}
               variants={cardVariants}
-              className="bg-[#1F2833]/80 backdrop-blur-md rounded-xl border border-slate-700/60 p-5 shadow-xl flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-[#66FCF1]/10 hover:-translate-y-1 hover:border-[#66FCF1]/50 group"
+              className={`bg-[#1F2833]/80 backdrop-blur-md rounded-xl border ${bot.id === "custom_standard" || bot.id === "custom_premium" ? "border-red-500/60 shadow-[0_0_15px_rgba(239,68,68,0.3)] hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]" : "border-slate-700/60 hover:border-[#66FCF1]/50 hover:shadow-[#66FCF1]/10"} p-5 shadow-xl flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group`}
             >
               {/* 1. Header & Badges */}
               <div>

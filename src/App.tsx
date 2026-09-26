@@ -252,6 +252,8 @@ const INITIAL_HEARTBEATS: BotHeartbeat[] = [
   { id: 'hermes', name: 'HERMES', codename: 'News Catalyst', category: 'gateway', pm2Id: 7, pid: 24216, latencyMs: 24, status: 'ALIVE', lastPingTime: '0.6s ago', uptime: '14d 6h', cpuPct: 0.7, memMb: 181.9, history: [26, 25, 23, 22, 24] },
   { id: 'chronos', name: 'CHRONOS', codename: 'Time Guardian', category: 'sentinel', pm2Id: 8, pid: 24220, latencyMs: 5, status: 'ALIVE', lastPingTime: '0.2s ago', uptime: '14d 6h', cpuPct: 0.3, memMb: 92.4, history: [6, 5, 5, 4, 5] },
   { id: 'hades', name: 'HADES', codename: 'COT Sentinel', category: 'sentinel', pm2Id: 9, pid: 24223, latencyMs: 8, status: 'ALIVE', lastPingTime: '0.3s ago', uptime: '14d 6h', cpuPct: 0.4, memMb: 104.1, history: [9, 8, 10, 7, 8] },
+  { id: 'custom_standard', name: 'CUSTOM', codename: 'PACHET MENTENANȚĂ', category: 'custom', pm2Id: 10, pid: 0, latencyMs: 0, status: 'CUSTOM', lastPingTime: 'N/A', uptime: 'N/A', cpuPct: 0.0, memMb: 0.0, history: [0] },
+  { id: 'custom_premium', name: 'CUSTOM', codename: 'PACHET PREMIUM', category: 'custom', pm2Id: 11, pid: 0, latencyMs: 0, status: 'CUSTOM', lastPingTime: 'N/A', uptime: 'N/A', cpuPct: 0.0, memMb: 0.0, history: [0] },
 ];
 
 interface ErrorBoundaryProps {

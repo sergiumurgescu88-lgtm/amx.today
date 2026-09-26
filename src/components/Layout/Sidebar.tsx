@@ -87,26 +87,7 @@ const MOBILE_ESSENTIAL_ITEMS: {
   { id: 'command-center', label: 'Overview', icon: Activity },
   { id: 'bot-matrix', label: 'Matrix', icon: Cpu },
   { id: 'live-terminal', label: '🔴 Live Feed', icon: Terminal },
-  { id: 'pricing', label: 'Pricing', icon: Zap  },
-  {
-    id: 11,
-    name: 'OMEGA',
-    subtitle: 'Neural Execution',
-    color: 'from-violet-600 to-purple-800',
-    status: 'LIVE',
-    description: 'Algoritm 100% automatizat, conectat live. Rulează 24/7 pe baza configurației noastre, fără nicio intervenție manuală.',
-    features: ['Conectare Live Directă', 'Zero Intervenție Manuală', 'Rulează 24/7 Autonom', 'Configurație Premium Inclusă']
-  },
-  {
-    id: 12,
-    name: 'DELTA',
-    subtitle: 'Adaptive Strategy',
-    color: 'from-amber-500 to-yellow-700',
-    status: 'LIVE',
-    description: 'Bot premium cu mentenanță activă. Include 4 modificări de strategie pe săptămână (valoare $100/modificare/bot).',
-    price: '$399 / săptămână',
-    features: ['4 Modificări Strategice / Săptămână', 'Valoare: $100 per modificare / bot', 'Adaptare Dinamică la Volatilitate', 'Suport Dedicat']
-  }
+  { id: 'pricing', label: 'Pricing', icon: Zap },
 ];
 
 interface SidebarProps {
@@ -233,6 +214,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <div className="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5">
             <div className="px-3 text-[10px] font-mono uppercase text-slate-500 tracking-wider">
               Ecosystem Hubs
+
+              <a
+                href="https://ai.amx.today"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0B0C10]/80 border border-[#66FCF1]/40 hover:border-[#66FCF1] hover:bg-[#66FCF1]/10 transition-all duration-300 shadow-[0_0_10px_rgba(102,252,241,0.1)] hover:shadow-[0_0_15px_rgba(102,252,241,0.3)]"
+              >
+                <span className="text-[#66FCF1] group-hover:text-[#66FCF1] transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 12a10.1 10.1 0 0 0 9.9 9.9V12z"/><path d="M12 12V2.1A10.1 10.1 0 0 0 2.1 12H12z"/></svg>
+                </span>
+                <div className="flex flex-col">
+                  <span className="text-sm font-bold text-[#66FCF1] tracking-wide">AI Architect</span>
+                  <span className="text-[10px] font-mono text-[#66FCF1]/70">OpenClaw Core</span>
+                </div>
+              </a>
+
             </div>
 
             <a
