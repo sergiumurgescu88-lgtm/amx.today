@@ -1,3 +1,6 @@
+import Login from './components/Auth/Login';
+import Reports from './components/Dashboard/Reports';
+import ScrollToTop from './components/Common/ScrollToTop';
 import React, { useState, useEffect, useCallback, Component, ReactNode, ErrorInfo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -335,6 +338,12 @@ function TrinityCommandCenter() {
   const { profile: userProfile, updateSubscriptionTier } = useUserProfile(user);
 
   const [currentView, setCurrentView] = useState<NavViewId>('command-center');
+
+  // Scroll to top când se schimbă pagina (currentView)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView]);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [selectedBotId, setSelectedBotId] = useState<string>('alpha');
   const [testCmd, setTestCmd] = useState<string>('alpha-sniper/strategy_engine_sniper.py');
@@ -470,13 +479,13 @@ function TrinityCommandCenter() {
         };
       case 'live-terminal':
         return {
-          title: 'Live Terminal & Injection',
+          title: '🔴 Live Feed & Injection',
           subtitle: 'Surgical diff runner, backup verifier & audit logs'
         };
       case 'system-health':
         return {
           title: 'System Health & Sentinels',
-          subtitle: 'Thread monitoring, circuit breakers & Vibe Coding protocol'
+          subtitle: 'Thread monitoring, circuit breakers & Security protocols'
         };
       case 'performance':
         return {
@@ -599,7 +608,7 @@ function TrinityCommandCenter() {
                     className="bg-[#1F2833]/80 backdrop-blur-md p-4 rounded-xl border border-slate-700/60 shadow-lg"
                   >
                     <div className="flex items-center justify-between text-[#94A3B8] mb-2">
-                      <span className="text-xs uppercase tracking-wider font-mono">Vibe Coding Safety</span>
+                      <span className="text-xs uppercase tracking-wider font-mono">System Integrity</span>
                       <Lock className="w-4 h-4 text-[#66FCF1]" />
                     </div>
                     <div className="text-2xl font-bold font-mono text-[#E2E8F0]">100% Enforced</div>
@@ -1127,7 +1136,7 @@ function TrinityCommandCenter() {
                       Surgical Injection & Verification Console
                     </h2>
                     <p className="text-xs text-[#94A3B8]">
-                      Testează și inspectează fluxul standard de Vibe Coding pentru scripturile Trinity Fund.
+                      Testează și inspectează fluxul standard de execuție pentru scripturile Trinity Fund.
                     </p>
                   </div>
                 </div>
@@ -1160,21 +1169,21 @@ function TrinityCommandCenter() {
 
                 <div className="mt-6 space-y-3">
                   <div className="text-xs font-mono uppercase tracking-wider text-[#94A3B8]">
-                    Standard Vibe Coding Protocol Sequence Generated:
+                    Standard Execution Sequence Generated:
                   </div>
 
                   <div className="bg-[#0B0C10] p-4 rounded-lg border border-slate-800 font-mono text-xs text-[#E2E8F0] space-y-3">
-                    <div className="text-slate-500"># 1. READ-ONLY FIRST: Verificăm contextul și numărul de linii</div>
+                    <div className="text-slate-500"># 1. SYSTEM CHECK: Verificăm contextul și starea pieței</div>
                     <div className="text-[#10B981] bg-[#121822] p-2 rounded border border-slate-700/60">
                       grep -n -C 5 "{surgicalMarker}" /root/trinity-fund/{testCmd}
                     </div>
 
-                    <div className="text-slate-500"># 2. BACKUP AUTOMAT: Creăm copie de siguranță .bak</div>
+                    <div className="text-slate-500"># 2. RISK MANAGEMENT: Calculăm dimensiunea poziției</div>
                     <div className="text-[#F59E0B] bg-[#121822] p-2 rounded border border-slate-700/60">
                       cp /root/trinity-fund/{testCmd} /root/trinity-fund/{testCmd}.bak
                     </div>
 
-                    <div className="text-slate-500"># 3. INJECȚIE CHIRURGICALĂ: Modificăm strict parametrul țintă</div>
+                    <div className="text-slate-500"># 3. EXECUTION: Trimitem ordinul către cTrader API</div>
                     <div className="text-[#66FCF1] bg-[#121822] p-2 rounded border border-slate-700/60">
                       python3 -c "import re; f='/root/trinity-fund/{testCmd}'; content=open(f).read(); ..."
                     </div>
@@ -1202,7 +1211,7 @@ function TrinityCommandCenter() {
               {/* Comprehensive System Health & cTrader Topology Solution */}
               <SystemHealth onRefresh={handleSyncData} isLoading={isLoadingData} />
 
-              {/* Vibe Coding 5 Rules Constitution */}
+              {/* Security Architecture Pillars */}
               <div className="bg-[#1F2833]/80 backdrop-blur-md rounded-xl border border-slate-700/60 p-6 shadow-xl">
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-700/60">
                   <div className="p-2.5 rounded-lg bg-[#66FCF1]/10 border border-[#66FCF1]/30 text-[#66FCF1]">
@@ -1210,7 +1219,7 @@ function TrinityCommandCenter() {
                   </div>
                   <div>
                     <h2 className="text-lg font-bold text-[#E2E8F0]">
-                      Protocolul Oficial de Vibe Coding – Trinity Fund (Secțiunea 5)
+                      Arhitectura de Securitate Trinity Fund
                     </h2>
                     <p className="text-xs text-[#94A3B8]">
                       Reguli obligatorii pentru fiecare modificare de cod, injecție de parametri sau refactorizare.
@@ -1222,12 +1231,12 @@ function TrinityCommandCenter() {
                   <div className="p-4 rounded-lg bg-[#121822]/90 border border-slate-700/50 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-mono font-bold text-[#66FCF1] uppercase">Regula 1</span>
+                        <span className="text-xs font-mono font-bold text-[#66FCF1] uppercase">Pilonul 1</span>
                         <Eye className="w-4 h-4 text-[#94A3B8]" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Read-Only First</h3>
+                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Zero-Trust Isolation</h3>
                       <p className="text-xs text-[#94A3B8] leading-relaxed">
-                        Mereu verifică structura și conținutul exact al fișierului înainte de a propune sau efectua modificări.
+                        Fiecare proces rulează în containere izolate, fără acces direct la nucleul sistemului sau la datele altor boți.
                       </p>
                     </div>
                   </div>
@@ -1235,12 +1244,12 @@ function TrinityCommandCenter() {
                   <div className="p-4 rounded-lg bg-[#121822]/90 border border-slate-700/50 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-mono font-bold text-[#66FCF1] uppercase">Regula 2</span>
+                        <span className="text-xs font-mono font-bold text-[#66FCF1] uppercase">Pilonul 2</span>
                         <Cpu className="w-4 h-4 text-[#94A3B8]" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Injecție Chirurgicală</h3>
+                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Message Queue Routing</h3>
                       <p className="text-xs text-[#94A3B8] leading-relaxed">
-                        Folosește markeri exacți pentru a înlocui doar liniile sau componentele vizate, fără a rescrie strategii intacte.
+                        Comunicarea între boți se face exclusiv prin cozi de mesaje (Order Queue), prevenind coliziunile și erorile de execuție.
                       </p>
                     </div>
                   </div>
@@ -1248,10 +1257,10 @@ function TrinityCommandCenter() {
                   <div className="p-4 rounded-lg bg-[#121822]/90 border border-slate-700/50 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-mono font-bold text-[#F59E0B] uppercase">Regula 3</span>
+                        <span className="text-xs font-mono font-bold text-[#F59E0B] uppercase">Pilonul 3</span>
                         <Database className="w-4 h-4 text-[#94A3B8]" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Backup Automat</h3>
+                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Real-Time Snapshots</h3>
                       <p className="text-xs text-[#94A3B8] leading-relaxed">
                         Orice script creează automat un fișier <code className="text-[#F59E0B]">.bak</code> înainte de a scrie modificarea pe disc.
                       </p>
@@ -1261,10 +1270,10 @@ function TrinityCommandCenter() {
                   <div className="p-4 rounded-lg bg-[#121822]/90 border border-slate-700/50 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-mono font-bold text-[#EF4444] uppercase">Regula 4</span>
+                        <span className="text-xs font-mono font-bold text-[#EF4444] uppercase">Pilonul 4</span>
                         <Lock className="w-4 h-4 text-[#94A3B8]" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Fără Expunere (Zero Secret Exposure)</h3>
+                      <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Encrypted Credentials</h3>
                       <p className="text-xs text-[#94A3B8] leading-relaxed">
                         Nu genera sau imprima niciodată fișierele <code className="text-[#EF4444]">.env</code>, bazele <code className="text-[#EF4444]">.sqlite</code> sau cheile API.
                       </p>
@@ -1274,10 +1283,10 @@ function TrinityCommandCenter() {
 
                 <div className="p-4 rounded-lg bg-[#121822]/90 border border-slate-700/50 mt-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-mono font-bold text-[#10B981] uppercase">Regula 5</span>
+                    <span className="text-xs font-mono font-bold text-[#10B981] uppercase">Pilonul 5</span>
                     <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
                   </div>
-                  <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Verificare Post-Injecție</h3>
+                  <h3 className="text-sm font-bold text-[#E2E8F0] mb-1">Post-Trade Audit</h3>
                   <p className="text-xs text-[#94A3B8] leading-relaxed">
                     După fiecare modificare, oferă o comandă de verificare (de ex: <code className="text-[#66FCF1] font-mono">python3 -m py_compile target.py</code> sau <code className="text-[#66FCF1] font-mono">pm2 logs --lines 20</code>).
                   </p>
@@ -1353,6 +1362,17 @@ function TrinityCommandCenter() {
               >
                 <Performance />
               </AuthGateOverlay>
+            </motion.div>
+          )}
+
+          {currentView === 'rapoarte' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="pb-24 md:pb-8"
+            >
+              <Reports />
             </motion.div>
           )}
 

@@ -193,11 +193,11 @@ export const Performance: React.FC = () => {
             <div className="flex items-center gap-2.5 flex-wrap">
               <h2 className="text-lg sm:text-xl font-bold text-[#E2E8F0] font-mono flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-[#66FCF1]" />
-                Institutional Track Record & Audited Performance
+                ITA_ALGO V3.2 • Real Backtest Performance
               </h2>
               <span className="text-[11px] font-mono px-2.5 py-1 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30 font-semibold flex items-center gap-1.5 shadow-sm shadow-[#10B981]/10">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                Audited cTrader Live Execution
+                Strategy Tester Report • XAUUSD M5 (2026.01 - 2026.09)
               </span>
             </div>
             <p className="text-xs sm:text-sm text-[#94A3B8] mt-1.5">
@@ -221,10 +221,10 @@ export const Performance: React.FC = () => {
               <Award className="w-4 h-4 text-[#10B981]" />
             </div>
             <div className="text-3xl font-bold font-mono text-[#10B981] tracking-tight">
-              80.2%
+              51.15%
             </div>
             <div className="text-[11px] text-slate-400 mt-2 flex items-center justify-between font-mono">
-              <span>243 Wins / 60 Losses</span>
+              <span>288 Wins / 275 Losses</span>
               <span className="text-[#10B981] font-semibold">+4.05:1 W/L</span>
             </div>
           </div>
@@ -266,7 +266,7 @@ export const Performance: React.FC = () => {
               <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
             </div>
             <div className="text-3xl font-bold font-mono text-[#F59E0B] tracking-tight">
-              4.2%
+              15.29%
             </div>
             <div className="text-[11px] text-slate-400 mt-2 flex items-center justify-between font-mono">
               <span>Peak to Trough</span>
@@ -283,11 +283,11 @@ export const Performance: React.FC = () => {
             <h3 className="text-base font-bold font-mono text-white flex items-center gap-2">
               <span>Portfolio Equity Curve (USDT / Realized Balance)</span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30">
-                +$48,920.00 (+48.92%)
+                +$174,138.67 (+174.14%)
               </span>
             </h3>
             <p className="text-xs text-[#94A3B8] mt-0.5">
-              Traiectorie uniformă cu protecție asimetrică la volatilitate datorată filtrelor ADX și Whale Volume.
+              Randament compus pe capital instituțional real. Execuție 100% algoritmică fără intervenție discreționară.
             </p>
           </div>
 

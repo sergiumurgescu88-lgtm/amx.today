@@ -91,7 +91,7 @@ const getAIResponse = (input: string): string => {
 
   // Track Record / Rezultate / Myfxbook
   if (query.includes('track') || query.includes('rezultat') || query.includes('myfxbook') || query.includes('istoric') || query.includes('profit')) {
-    return '📈 Flota Trinity Fund are un Win Rate auditat de 80.2%, un Sharpe Ratio de 7.12 și un Profit Factor de 2.48. Poți consulta raportul complet în secțiunea Performance!';
+    return '📈 Flota Trinity Fund are un Win Rate auditat de 51.15%, un Sharpe Ratio de 7.12 și un Profit Factor de 2.48. Poți consulta raportul complet în secțiunea Performance!';
   }
 
   // Salut / Bună

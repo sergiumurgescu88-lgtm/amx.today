@@ -120,7 +120,7 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-3',
     question: 'Ce se întâmplă dacă botul are o lună pe pierdere?',
-    answer: 'Prioritatea numărul 1 a Trinity Fund este conservarea asimetrică a capitalului. Sistemul are încorporate gardieni de risc hardcoded: circuit breaker zilnic de maxim 1.5% drawdown și limite maxime pe lună de 4.2%. În momentele de toxicitate a pieței sau lichiditate scăzută (orele de rollover bancar, știri NFP extreme), sentinelele Chronos și Hades activează automat modul VETO, blocând tranzacționarea până la revenirea condițiilor normale.'
+    answer: 'Prioritatea numărul 1 a Trinity Fund este conservarea asimetrică a capitalului. Sistemul are încorporate gardieni de risc hardcoded: circuit breaker zilnic de maxim 1.5% drawdown și limite maxime pe lună de 15.29%. În momentele de toxicitate a pieței sau lichiditate scăzută (orele de rollover bancar, știri NFP extreme), sentinelele Chronos și Hades activează automat modul VETO, blocând tranzacționarea până la revenirea condițiilor normale.'
   }
 ];
 

@@ -16,7 +16,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-export type NavViewId = 'command-center' | 'bot-matrix' | 'live-terminal' | 'system-health' | 'performance' | 'pricing';
+export type NavViewId = 'command-center' | 'bot-matrix' | 'live-terminal' | 'system-health' | 'performance' | 'pricing' | 'rapoarte';
 
 interface NavItem {
   id: NavViewId;
@@ -43,7 +43,7 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     id: 'live-terminal',
-    label: 'Live Terminal',
+    label: '🔴 Live Feed',
     icon: Terminal,
     badge: 'V5 VIBE',
     description: 'Surgical injection console'
@@ -59,8 +59,15 @@ const NAV_ITEMS: NavItem[] = [
     id: 'performance',
     label: 'Performance',
     icon: TrendingUp,
-    badge: '80.2% WR',
+    badge: '51.15% WR',
     description: 'Audited returns & track record'
+  },
+  {
+    id: 'rapoarte',
+    label: 'Rapoarte',
+    icon: BarChart3,
+    badge: 'ITA TEST',
+    description: 'Strategy Tester Results'
   },
   {
     id: 'pricing',
@@ -79,7 +86,7 @@ const MOBILE_ESSENTIAL_ITEMS: {
 }[] = [
   { id: 'command-center', label: 'Overview', icon: Activity },
   { id: 'bot-matrix', label: 'Matrix', icon: Cpu },
-  { id: 'live-terminal', label: 'Terminal', icon: Terminal },
+  { id: 'live-terminal', label: '🔴 Live Feed', icon: Terminal },
   { id: 'pricing', label: 'Pricing', icon: Zap },
 ];
 
